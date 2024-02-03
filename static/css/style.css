@@ -9,8 +9,11 @@
 }
 
 .form-border {
+    width: 40rem;
 
-    width: 50rem;
+    margin-top: 60px;
     min-height: 10vh;
     border: 10px solid brown;
+    padding: 40px;
+
 }
