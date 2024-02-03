@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+<h1>All Contact</h1>
+<div class="container">
+    <div class="card" style="width: 40rem;">
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.no</th>
+            <th scope="col">Full  Name</th>
+            
+            <th scope="col">Mobile No</th>
+        </tr>
+        {% for  contact in contacts %}
+        <tr>
+            <th scope="col">{{contact.id}}</th>
+            <th scope="col">{{contact.first_name}} {{contact.last_name}}</th>
+            
+            <th scope="col">{{contact.phone_number}}</th>
+            <th> <a href="{% url 'book:edit_contact' contact.id %}" class="btn btn-primary">Update</a></th>
+           
+            <th>
+                <th> <a href="{% url 'book:contact_details' contact.id %}" class="btn btn-primary">View</a></th>
+           
+            <th>
+            <form action="{% url 'book:delete_contact' contact.id %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <input type="submit" class="btn btn-danger" value="Delete">
+              </form> 
+            </th>
+        </tr>
+        
+     {% endfor %}
+    </thead>
+</table>
+</table>
+</div>
+</div>
+{% endblock content %}
