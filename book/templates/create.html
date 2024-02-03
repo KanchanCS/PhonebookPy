@@ -5,7 +5,7 @@ Home
 {% endblock title %}
 
 {% block content %}
-<h1>Contact Forms</h1>
+{% comment %} <h1>Contact Forms</h1>
 <div class="card">
     <div class="card-body">
         <form method="post">
@@ -14,5 +14,22 @@ Home
             <input type="submit" value="Submit"/>
         </form>
     </div>
-</div>
+</div> {% endcomment %}
+
+
+    <div class="container" style="width: 40rem;">        
+                <div class="card">
+                        <h3 class="text-center">Contact Forms</h3>
+                    
+                    <div class="card-body">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+       
 {% endblock content %}

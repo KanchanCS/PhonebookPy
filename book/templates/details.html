@@ -1,15 +1,24 @@
 {% extends "base.html" %}
-{% block contant %}
+{% block content %}
 
-<div class="container">
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">User Name:{{contact.first_name}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+<div class="container mt-5">
+  <h1 class="alert-danger text-center p-3">User Detail</h1>
+  <div class="col-sm-10 shadow p-5 offset-sm-1" style="width: 50rem;">
+    <h5 class="text-center">Welcome {{contact.user}}</h5>
+    
+      <p >First Name: {{contact.first_name}}</p>
+      <p >Last Name: {{contact.last_name}}</p>
+      <p >Email: {{contact.email}}</p>
+      <p >Phone No: {{contact.phone_number}}</p>
+      <p >Address: {{contact.address_line1}}, {{contact.city}}, {{contact.state}}, {{contact.country}}, {{contact.postal_code}} </p>
+      <p >Birthday: {{contact.birthday}}</p>
+      <p >Website: {{contact.website}}</p>
+      <p >Note: {{contact.notes}}</p>
+      <p >Category: {% for category in contact.category.all %}{{category}},{% endfor %}</p>
+      <div class="text-center">
+        <a href="/" class="btn btn-danger">Back to Home</a>
+       </div>
+  </div>
 </div>
 
-{% endblock contant %}
+{% endblock content %}
