@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar {
+    box-shadow: 10px 5px 5px red;
+}
+
+.form-border {
+
+    width: 50rem;
+    min-height: 10vh;
+    border: 10px solid brown;
+}
