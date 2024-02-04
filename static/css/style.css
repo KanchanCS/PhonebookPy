@@ -5,15 +5,34 @@
 }
 
 .navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
     box-shadow: 10px 5px 5px red;
+
 }
 
 .form-border {
-    width: 40rem;
-
-    margin-top: 60px;
-    min-height: 10vh;
+    margin-top: 100px;
+    margin-left: 500px;
+    width: 500px;
     border: 10px solid brown;
-    padding: 40px;
+    min-height: 100vh;
+    padding: 10px;
+    color: white;
+}
 
+.form-border .text {
+    text-align: center;
+}
+
+.container .text {
+    text-align: center;
+    color: white;
+}
+
+.container .card {
+    margin-top: 100px;
+    margin-left: 250px;
 }
